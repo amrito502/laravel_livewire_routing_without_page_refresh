@@ -20,10 +20,9 @@
     {{-- <button wire:click.prevent='createNewUser'>Create</button> --}}
     <button>Create</button>
   </form>
+  <br>
   <hr>
-
-
-<hr>
+  <hr>
 <h3 class="text-green-500 mt-5" style="font-size: 40px; font-weight: 700;">All User Data</h3>
   <table class="border-separate border-collapse border border-slate-400 mt-3">
     <thead>
@@ -50,5 +49,9 @@
       @endforelse
 
     </tbody>
+
   </table>
+  <div class="pagination_user mt-6" style="width: 57.5%;">
+    {{ $users->links() }}
+  </div>
 </div>
