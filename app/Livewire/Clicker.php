@@ -8,7 +8,7 @@ use Livewire\Component;
 
 class Clicker extends Component
 {
-   
+
     public $name;
     public $email;
     public $password;
@@ -25,6 +25,8 @@ class Clicker extends Component
         ]);
 
         $this->reset(['name','email','password']);
+
+        session()->flash("success","User Created Successfully!");
     }
     public function render()
     {
