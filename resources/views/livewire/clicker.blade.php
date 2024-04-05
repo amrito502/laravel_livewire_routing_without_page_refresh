@@ -7,9 +7,11 @@
     <h4>Create User : </h4>
   <form wire:submit='createNewUser'>
     <input wire:model='name' type="text" placeholder="name"> <br>
+    @error('name')<span class="text-red-500 text-xs">{{ $message }}</span>@enderror <br>
     <input wire:model='email' type="text" placeholder="email"> <br>
+    @error('email')<span class="text-red-500 text-xs">{{ $message }}</span>@enderror <br>
     <input wire:model='password' type="password" placeholder="password"> <br>
-
+    @error('password')<span class="text-red-500 text-xs">{{ $message }}</span>@enderror <br>
     {{-- <button wire:click.prevent='createNewUser'>Create</button> --}}
     <button>Create</button>
   </form>
